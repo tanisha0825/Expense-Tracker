@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expend Wise Tracker</title>
+    <link rel="stylesheet" href="/css/tracker.css" />
+    <link rel="icon" type="image/jpg" href="/images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://kit.fontawesome.com/b29b05d195.js" crossorigin="anonymous"></script>
+    
+  </head>
+
+
+  <body>
+    <nav>
+      <div class="menu">
+        <span
+          ><img src="/images/logo.png" height="190" style="margin-left: 20px;position:fixed; top:-30px; left:0px;"
+        /></span>
+
+        <ul>
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li><a href="">Walkthrough</a></li>
+          <li>
+            <a href="/html/blog.html">Blogs</a>
+          </li>
+          <li>
+            <a href="">Settings<i class="fa fa-caret-down"></i></a>
+            <div class="dropd_menu" id="two">
+              <ul>
+                <li><a href="">Change Theme</a></li>
+                <li><a href="/html/index.html">Home Page</a></li>
+                <li><a href="/html/feedback.html">Feedback</a></li>
+              </ul>
+            </div>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="homepage">
+        <img src="/images/plain.png" height="800">
+        <div class="sidebar">
+            <div class="sidecont"><a href="">HOME</a></div>
+            <div class="sidecont"><a href="">TABULAR DISPLAY</a></div>
+            <div class="sidecont"><a href="">BILLS AND RECIEPTS</a></div>
+            <div class="sidecont"><a href="">IDEAL EXPENSE ANALYSIS</a></div>
+            <div class="sidecont"><a href="">EXCEL REPORT</a></div>
+            
+        </div>
+        <h1>Welcome USER 👋🏻</h1>        
+    </div>
+    <div class="box">
+        <div class="b1" >
+          <h3>Current Salary</h3>
+          <h1 id="current_salary" style="margin-top:20px; margin-left:20px; font-size: 2em;">0.00</h1>
+        </div>
+        <div class="b1" id="balance">
+          <h3>Current Balance</h3>
+          <h1 id="current_balance" style="margin-top:20px; margin-left:20px; font-size: 2em;" >0.00</h1>
+
+        </div>
+        <div class="b1" id="prev-records"><h3>Previous Records</h3>
+        <a href=""><i class="fa-solid fa-file" style="margin-top:10px;margin-left:40%; font-size: 4em;"></i></a>
+        </div>
+    </div>
+    <div class="mainarea">
+      <!-- input the areas -->
+        <div class="input-area">
+
+          <label for="salary"><h4 style="font-size: 1em; color:rgb(92, 2, 92)">Enter this month's Salary: </h4></label> 
+            <input type="text" id="salary_text" width="100" placeholder="Enter Salary....."><br>
+
+            <h4 style="font-size: 1em; color:rgb(92, 4, 92)">Enter expense category: </h4>
+            <input type="text" id="expcat_text" width="100" placeholder="Enter Expense Category....."><br>
+
+           <label for="amount"><h4 style="font-size: 1em; color:rgb(96, 4, 96)">Enter expense: </h4></label> 
+            <input type="text" id="amt_text" width="100" placeholder="Enter Expense.....">
+        </div>
+        <!-- side portion of transactions -->
+        <div id="current-transactions">
+          <h1>EXPENSE CATEGORIES</h1><br>
+          <UL id="list" class="list">
+            <li>Groceries</li>
+            <li>Healthcare</li>
+            <li>Education</li>
+            <li>Housing</li>
+            <li>Insurance</li>
+            <li>Taxes and Investments</li>
+            <li>Transportation</li>
+            <li>Personal Care</li>
+            <li>Debt</li>
+            <li>Clothing</li>
+            <li>Recreation</li>
+          </UL>
+        </div>
+        <!-- button -->
+        <button id="calc-exp" onclick=calculation()>CALCULATE</button>
+        <button id="table_cal" onclick=table_cal()>ADD TABLE</button><br><br>
+
+        <div id="indications">
+          <h3>Key Indications...</h3>
+          <h3 id="indicate"></h3>
+        </div>
+    </div>
+
+    <div class="table">
+      <h1 id="table-head" style="position: relative; left:130px;bottom:30px; color:rgb(255, 255, 255); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">🔻TABULAR DISPLAY OF DATA🔻</h1>
+      <table id="myTable" class="tablefunc" cellspacing="0">
+        <thead>
+          <tr>
+            <th>S.No.</th>
+            <th>Category</th>
+            <th>Expense</th>
+            <th>Notes📝</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table body will be populated dynamically -->
+        </tbody>
+      
+      </table>
+      </table>
+      <button onclick="tableToExcel()" id="toexcel">TABLE TO EXCEL</button>
+    </div>
+
+
+    <div class="bills">
+
+      <h1 style="position: relative; left:630px;bottom:-20px; color:rgb(160, 43, 255); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">🔻BILLS AND RECIEPTS🔻</h1>
+      <div class="bill-content">
+        <h3>Attach your bills and reciepts here⬇️: </h3><br>
+        <input type="file" accept="image/*,.pdf" id="fileInput" >
+        <div id="fileContainer"></div>
+      </div>
+    </div>
+
+
+
+    <!-- CURRENCY CONVERSION
+    <div id="bonus_features">
+      <img id="phone" src="/images/img.svg" height="500" style="margin-left:200px;" />
+      <div id="features">
+        <br />
+        <b><h2>Currency Conversion</h2></b><br />
+        <h3>Enter In Rupees</h3>
+        <input type="text" id="rup"/><br /><br>
+        <div class="swap"><i class="fa-solid fa-retweet" style="font-size:50px"></i></div><br>
+        <h3>Currency in Dollars</h3>
+        <input type="text"  id="doll" readonly/><br /><br>
+        <button class="click" type="reset" onclick="calculateAndDisplay()"><b>CONVERT</b></button>
+      </div>
+    </div> -->
+
+    <!-- <div class="graphs">
+      <h1 id="table-head" style="position: relative; left:600px;bottom:-50px; color:rgb(47, 0, 0); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">🔻IDEAL EXPENSE ANALYSIS🔻</h1>
+      <div class="ideal">
+
+      </div>
+    </div> -->
+
+    <script src="/javascript/tracker.js"></script>
+    <script src="/javascript/table2excel.js"></script>
+  </body>
+</html>

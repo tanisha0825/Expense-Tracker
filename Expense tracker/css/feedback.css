@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Outfit';
+    background-image: linear-gradient(to right,rgb(226, 226, 238),rgb(227, 166, 255));
+
+}
+
+.head{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.447);
+}
+
+.feedback{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left{
+    position: absolute;
+    right: 750px;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.left-title h2{
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    margin: 5px;
+}
+.left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: rgba(0,0,0);
+}
+.inputs{
+    background: rgba(224, 133, 224, 0.037) ;
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.297);
+    border-radius: 50px;
+
+}
+.feedback textarea{
+    height: 140px;
+    padding-top: 15px ;
+    border-radius: 20px;
+}
+.inputs:focus{
+    border: 1px solid black;
+}
+.feedback button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: rgba(224, 133, 224, 0.626);
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,rgba(235, 136, 235, 0.151),rgba(224, 133, 224, 0.626));
+    cursor: pointer;
+}
+.feedback button h4{
+    color: white;
+}
+.feedback button img{
+    height: 15px;
+}
+
+@media (max-width:800px){
+    .inputs{
+        width: 80vw;
+    }
+}
+
+.container1{
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+    
+.feedbackbox{
+    
+    position: absolute;
+    left: 700px;
+    box-shadow:2px 2px 1px 0px rgba(0, 0, 0, 0.447) ;
+    background:rgb(236, 212, 255);
+    padding: 50px 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+
+}
+.emoji{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#emoji{
+     
+    display: flex;
+    align-items: center;
+    transform: translateX(-400px);
+    transition: 0.3s;
+}
+
+.emoji img{
+    width: 80px;
+    margin: 0px 10px;
+
+}
+
+.rating .fas{
+    font-size: 40px;
+    color: #000;
+    cursor: pointer;
+}
+.menu{
+    background-color:transparent;
+    height:80px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0.5px;
+}
+.menu ul{
+    list-style-type: none;
+    display:flex;
+}
+.menu ul li{
+    padding : 10px 30px;
+    position: relative;
+    transition:1s;
+}
+
+.menu ul li a {
+    color:rgb(21, 1, 1);    
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 1.1em;
+}
+.menu ul li a:hover {
+    color: rgb(1, 1, 7);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+
+.dropd_menu {
+    display: block;
+    position:absolute;
+    left:0;
+    top:100%;
+    background-image: linear-gradient(to right,rgb(243, 226, 250),rgb(236, 212, 255));
+    display:none;
+    border-radius: 3%;
+    z-index: 1;
+}
+.dropd_menu ul{
+    display:block;
+    margin:10px;
+    font-size: 0.8em;
+}
+.dropd_menu  ul li{
+    width:150px;
+    padding:10px;
+
+}
+.dropd_menu ul li:hover {
+    color:rgb(226, 226, 238);
+    font-size: 1.1em;
+}
+.menu ul li:hover .dropd_menu {
+    display: block;
+    transition:0.2s;
+}
+
+

@@ -1,0 +1,410 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #FBF7FF;
+    overflow-x: hidden;
+}
+
+.menu{
+    background-color: rgb(253, 252, 255);
+    height:120px;
+    width:100%;
+    display:flex;
+    position: fixed;
+    align-items:center;
+    justify-content: space-between;
+    padding:0.5px;
+    z-index: 1;
+}
+.menu ul{
+    list-style-type: none;
+    display:flex;
+    
+}
+.menu ul li{
+    padding : 10px 30px;
+    position: relative;
+    transition:1s;
+}
+
+.menu ul li a {
+    color:rgb(21, 1, 1);    
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 1.1em;
+}
+.menu ul li a:hover {
+    color: rgb(1, 1, 7);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+
+.dropd_menu {
+    display: block;
+    position:absolute;
+    left:0;
+    top:100%;
+    background-image: linear-gradient(to right,rgb(243, 226, 250),rgb(236, 212, 255));
+    display:none;
+    border-radius: 3%;
+    z-index: 1;
+}
+.dropd_menu ul{
+    display:block;
+    margin:10px;
+    font-size: 0.8em;
+}
+.dropd_menu  ul li{
+    width:150px;
+    padding:10px;
+
+}
+.dropd_menu ul li:hover {
+    color:rgb(226, 226, 238);
+    font-size: 1.1em;
+}
+.menu ul li:hover .dropd_menu {
+    display: block;
+    transition:0.2s;
+}
+
+.homepage{
+    width:100%;
+    height:1000px;
+    overflow: hidden;
+}
+.homepage img{
+    width:100%;
+}
+.sidebar{
+    height:680px;
+    width:20%;
+    background-color: rgb(252, 254, 255);
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    top:120px;
+    float: right;
+    z-index: 1;
+}
+.sidecont{
+    height:30px;
+    width:250px;
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-bottom:6px;
+    margin-top:5px;
+    
+}
+.sidebar .sidecont a{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    text-decoration: none;
+    font-size: 1em;
+}
+.sidecont:hover{
+    background-color: rgb(208, 179, 234);
+}
+.homepage h1{
+    font-size: 3em;
+    position: absolute;
+    top:130px;
+    left: 25%;
+    padding: 0 10px;
+}
+.homepage h1::after{
+    content:'';
+    position:absolute;
+    background-image:linear-gradient(to right,rgb(239, 18, 18),rgb(220, 146, 61),rgb(249, 246, 71),rgb(83, 209, 15),rgb(25, 119, 227));
+    height:4px;
+    width:0;
+    left:0;
+    bottom:-10px;
+    transition: 1s;
+}
+.homepage h1:hover:after{
+    
+    width:100%;
+}
+.box{
+    height: 200px;
+    width: 900px;
+    display: flex;
+    position: relative;
+    top:230px;
+    left:25%;
+    position:absolute;
+    
+}
+.b1{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    height:150px;
+    width:270px;
+    padding:20px;
+    background-color: rgb(243, 236, 250);
+    box-shadow: 5px 5px 5px rgb(83, 82, 82); 
+    margin-left: 2%;
+}
+.mainarea{
+    height: 450px;
+    width: 850px;
+    background-color:#DED5F4;
+    box-shadow: 5px 5px 5px rgb(83, 82, 82); 
+    position: absolute;
+    top:400px;
+    left:27%;
+}
+.mainarea h4{
+    position: relative;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#amt_text{
+    background-color: rgb(255, 255, 255);
+    height:30px;
+    border:0.5px solid grey;
+}
+#salary_text{
+    background-color: rgb(255, 255, 255);
+    height:30px;
+    border:0.5px solid grey;
+}
+#expcat_text{
+  background-color: rgb(255, 255, 255);
+  height:30px;
+  border:0.5px solid grey;
+}
+select:focus {
+    outline: none;
+    border-color: #2b007b; /* Change border color on focus */
+  }
+select {
+    padding: 4px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333333;
+  }
+  option {
+    padding: 10px;
+    background-color: #fff;
+    
+    color:rgb(67, 2, 67)
+  }
+  #current-transactions{
+    height:370px;
+    width:290px;
+    font-size:0.75em;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    position: absolute;
+    right:20px;
+    top:20px;
+    /* box-shadow: 2px 2px 9px rgb(48, 47, 47); */
+    
+  }
+  #current-transactions h1{
+    padding-top:10px;
+    padding-left:30px;
+    color:rgb(65, 2, 90);
+    transition: 0.5s;
+    ;
+  }
+  #current-transactions h1:hover{
+    color:rgb(158, 7, 217);
+  }
+
+  #calc-exp{
+    height:40px;
+    width:100px;
+    margin-left: 100px;
+    margin-top:30px;
+    color:white;
+    background-color: #8456b8;
+    border:none;
+    cursor: pointer;
+    transition:0.5s;
+    
+  }
+  #table_cal{
+    height:40px;
+    width:100px;
+    margin-left: 10px;
+    margin-top:30px;
+    color:white;
+    background-color: #8456b8;
+    border:none;
+    cursor: pointer;
+    transition:0.5s;
+  }
+  #calc-exp:hover{
+    background-color: #613e85;
+    transform: scale(1.1);
+  }
+  #table_cal:hover{
+    background-color: #613e85;
+    transform: scale(1.1);
+  }
+
+  #indications{
+    background-color: #ffffff;
+    height:120px;
+    width:400px;
+    display:inline-block;
+    margin-top: 1px;
+    margin-left:40px;
+  }
+  #indications h3{
+    padding-left:120px;
+    padding-top: 10px;
+    color:rgb(65, 2, 90);
+  }
+
+  .list{
+    list-style-type: none;
+    padding: 3px;   
+  }
+  
+  /* bonus */
+  #bonus_features{
+    position:relative;
+    top:30px;
+    left:100px;
+    height:550px;
+    width:100%;
+    background-image:linear-gradient(#AC8DD0 50%,rgba(194, 176, 220, 0.795) 50%)
+}
+#features{
+    background-color: rgb(250, 240, 255);
+    height:350px; font-size:medium; border-radius: 20px; padding:10px; width: 300px;
+    margin-top: 10px;
+    text-align: center;
+    position: absolute;
+    font-family: 'Segoe UI';
+    right:150px;
+    top:100px;
+    transition: 1s;
+}
+#features:hover{
+    background-color: rgb(255, 255, 255);
+    transform:scale(1.1);
+}
+.click{
+    background-color: rgb(160, 97, 242);
+    border:none;
+    height:40px;
+    width:80px; 
+    border-radius: 10%;
+    box-shadow: 2px 2px 5px rgb(96, 96, 96);
+    cursor:pointer;
+    color:white;
+    font-weight: 100;
+}
+
+#indicate{
+  margin-top: 5%;
+  padding:10px;
+  transition: background-color 1s;
+}
+
+/* table */
+.table{
+  height:700px;
+  width: 100%;
+  left:00px;
+  background-color: #ac8dd0;
+  /* position:absolute; */
+  top:80px;
+  padding:80px;
+  padding-left:400px ;
+}
+#myTable{
+  /* height:500px; */
+  width:700px;
+  box-shadow: 5px 5px 6px rgb(44, 44, 44);
+
+}
+#myTable td{
+  /* height:2px; */
+  width:175px;
+  padding: 2px;
+  color:white;
+}
+table, th, td {
+  text-align: center;
+  padding: 10px;
+  background-color:#fbf4fd;
+  border:1px solid rgb(98, 1, 140);
+}
+
+/* side content */
+.list{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list li{
+  margin-bottom:10px;
+  font-size: 1.3em;
+  transition: 1s;
+}
+.list li:hover{
+ color: #613e85;
+ transform: scale(1.4);
+}
+/* bills */
+.bills{
+  height:500px;
+  background-color:#FBF7FF;
+}
+.bill-content{
+  height:400px;
+  width:830px;
+  position: relative;
+  top:30px;
+  left:390px;
+  background-color: #ffffff;
+  padding-left: 30px;
+  padding-top: 30px;
+  /* border:2px solid black; */
+  box-shadow: 5px 5px 6px rgb(68, 68, 68);
+}
+.graphs{
+  background-color: #dcc8f3;
+  height:600px;
+  width:100%;
+}
+#toexcel{
+  background-color: #752fc6;
+  border:none;
+  color:white;
+  height:50px;
+  width:150px;
+  position:absolute;
+  left:650px;
+  cursor: pointer;
+  transition: 1s;
+  top:1600px;
+}
+
+#toexcel:hover{
+  background-color: #6916c9;
+  transform: scale(1.1);
+  
+}

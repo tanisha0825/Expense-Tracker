@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    background-color: rgb(248, 240, 254);
+    height:120px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0.5px;
+}
+.menu ul{
+    list-style-type: none;
+    display:flex;
+}
+.menu ul li{
+    padding : 10px 30px;
+    position: relative;
+    transition:1s;
+}
+
+.menu ul li a {
+    color:rgb(21, 1, 1);    
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 1.1em;
+}
+.menu ul li a:hover {
+    color: rgb(1, 1, 7);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+
+.dropd_menu {
+    display: block;
+    position:absolute;
+    left:0;
+    top:100%;
+    background-image: linear-gradient(to right,rgb(243, 226, 250),rgb(236, 212, 255));
+    display:none;
+    border-radius: 3%;
+    z-index: 1;
+}
+.dropd_menu ul{
+    display:block;
+    margin:10px;
+    font-size: 0.8em;
+}
+.dropd_menu  ul li{
+    width:150px;
+    padding:10px;
+
+}
+.dropd_menu ul li:hover {
+    color:rgb(226, 226, 238);
+    font-size: 1.1em;
+}
+.menu ul li:hover .dropd_menu {
+    display: block;
+    transition:0.2s;
+}
+
+section {
+    padding: 2rem;
+}
+
+section h2{
+    text-align: center ;
+    font-weight: 7px;
+    font-size: 2em;
+}
+section p{
+    text-align: center;
+    font-weight: 2px;
+}
+
+.event {
+   text-align: center;
+    margin-bottom: 1rem;
+}
+#team{
+    background:linear-gradient(to right, #fffdfd, rgb(236, 212, 255))
+}
+
+.team-members {
+    background:linear-gradient(to right, #fffdfd, rgb(236, 212, 255));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-members .member {
+    flex-basis: calc(33.33% - 2rem);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.team-members .member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-bottom: 0.5rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form input[type="submit"] {
+    background-color: rgb(236, 212, 255);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+#contact-form input[type="submit"]:hover{
+    background-color: black;
+    color: #ccc;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .team-members .member {
+        flex-basis: calc(50% - 2rem);
+    }
+}

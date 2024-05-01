@@ -1,0 +1,338 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.menu{
+    background-color: rgb(253, 252, 255);
+    height:120px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0.5px;
+}
+.menu ul{
+    list-style-type: none;
+    display:flex;
+}
+.menu ul li{
+    padding : 10px 30px;
+    position: relative;
+    transition:1s;
+}
+
+.menu ul li a {
+    color:rgb(21, 1, 1);    
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 1.1em;
+}
+.menu ul li a:hover {
+    color: rgb(1, 1, 7);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+
+.dropd_menu {
+    display: block;
+    position:absolute;
+    left:0;
+    top:100%;
+    background-image: linear-gradient(to right,rgb(243, 226, 250),rgb(236, 212, 255));
+    display:none;
+    border-radius: 3%;
+    z-index: 1;
+}
+.dropd_menu ul{
+    display:block;
+    margin:10px;
+    font-size: 0.8em;
+}
+.dropd_menu  ul li{
+    width:150px;
+    padding:10px;
+
+}
+.dropd_menu ul li:hover {
+    color:rgb(226, 226, 238);
+    font-size: 1.1em;
+}
+.menu ul li:hover .dropd_menu {
+    display: block;
+    transition:0.2s;
+}
+
+
+#main{
+    height:600px;
+    width:100%;
+    background-attachment: fixed;
+    background-color: rgb(227, 166, 255);
+    z-index: 5;
+    
+}
+#main img{
+    width: 100%;
+}
+
+.heading{
+    display: inline-block;
+    position: absolute;
+    top:25%;
+    left:3%;
+    height:550px;
+    width:500px;
+    border-radius: 3%;
+    box-shadow: 5px 5px 30px rgb(73, 72, 72);
+    background-color: rgba(227, 218, 218, 0.499);
+    
+}
+.heading h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    position: relative;
+    margin-bottom: 100px;
+    left:10%;
+    top:10%;
+}
+.heading span{
+    position:relative;
+    left:10%;
+    font-weight: 900;
+    margin-top:83%;
+    font-family: 'Trebuchet MS';
+    font-size: 85px;
+    color:rgb(112, 112, 236);
+    background-color: #DED5F4;
+}
+
+.features{
+    height:700px;
+    width:100%;
+    background-color:#f1edf9;
+    background-position:fixed;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.features .main_content{
+    height:500px;
+    width:1000px;
+    background-image: linear-gradient(rgb(255, 255, 255) 50%,#ffffff);
+    margin-right:1%;
+    margin-top: 4%;
+    padding:30px;
+    box-shadow: 5px 5px 10px rgb(69, 67, 67);
+    border-radius: 10%;
+    display:flex;
+    flex-wrap: wrap;
+    transition: transform 1s;
+    
+}
+
+.features  .headingf{
+    margin-top: 2%;    
+}
+.features h1{
+    font-size: 2em;
+}
+
+.up{
+    display:flex;
+    overflow-x: scroll;
+}
+.up::-webkit-scrollbar{
+    display: none;
+}
+.up img{
+    margin-left:5px;
+    margin-top: 30px;
+    transition: 1s;
+    margin-right: 90px;   
+    border-radius: 10%;
+    box-shadow: 4px 4px 4px rgb(126, 124, 124);
+}
+.down img{
+    margin-left:180px;
+    border-radius: 10%;
+    margin-right: 0px;   
+    box-shadow: 4px 4px 4px rgb(129, 127, 127);
+    transition: 1s;
+}
+.down img:hover,.up img:hover{
+    transform: scale(1.1);
+}
+.lr{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height:50px;
+    top:1270px;
+    right:600px;
+}
+#left,#right{
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.logos{ 
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: rgb(252, 252, 252);
+}
+.logos-slide{
+    animation: 10s slide infinite linear;
+    display: inline-block;
+}
+.logos-slide img{
+    height:150px;
+    margin-right:40px;
+}
+@keyframes slide{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+.testimonials{
+    min-height: 100vh;
+    margin:0 auto;
+    width:100%;
+    background-image:linear-gradient(#FCFCFC,#DED5F4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.testimonials h1{
+    margin-left: 5%;
+    position: relative;
+    top:100px;
+    margin-bottom: 50px;
+    color:rgb(0, 0, 0);
+}
+.boxes{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    overflow: hidden;
+    height:500px;
+}
+.cards{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+    margin: 0 auto;
+}
+.card{
+    width: 300px;
+    height:270px;
+    border-radius: 15px;
+    margin:5px;
+    padding:20px 30px;
+    position: relative;
+    background-image: linear-gradient(to bottom,);
+    box-shadow: 5px 5px 8px rgb(38, 38, 38);
+    transition: 1s;
+    color:rgb(0, 0, 0);
+}
+.card img{
+    height: 90px;
+    width:90px;
+    border-radius: 50%;
+    border: 5px solid rgb(248, 243, 252);
+    top:-12px;
+    left:10px;
+}
+.card:hover{
+    transform: scale(1.2);
+    background-color:white;
+    z-index: 5;
+    color:black;
+}
+footer{
+    height:300px;
+    background-image:linear-gradient(#DED5F4 ,rgb(196,166,246));
+}
+.socials{
+    height:180px;
+    width:100%;
+    background-color: white;
+}
+.socials h1{
+    margin-left: 37%;
+    position: relative;
+    top:10px;
+    margin-bottom: 50px;
+    color:rgb(0, 0, 0);
+}
+.socials .smedia{
+    position: relative;
+    top:0px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.smedia i{
+    margin-right:50px;
+    margin-left: 10px;
+    font-size: 4em;
+    transition: 1s;
+}
+.smedia i:hover{
+    color:rgb(108, 106, 106);
+    transform: rotate(360deg);
+}
+
+
+.round {
+    position: absolute;
+    top: 200px;
+    right: 120px;
+    display: flex;
+    justify-content: space-between; /* Add this to create space between images */
+    align-items: center; /* Center the images vertically */
+    height: 120px;
+    width: 450px; /* Adjusted width to accommodate space between images */
+    border-radius: 50%;
+    border: 7px solid rgba(0, 41, 207, 0);
+    transition: 0.5s;
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.image {
+    width: 100px; /* Adjust image size as needed */
+    height: 100px; /* Adjust image size as needed */
+}
+
+
+#W {
+    transition: 1.5s;
+}
+
+#W:hover {
+    transform: rotate(360deg);
+}
+
+
+
+
+

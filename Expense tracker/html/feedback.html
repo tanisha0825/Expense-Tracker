@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="/css/feedback.css" >
+    <script src="https://kit.fontawesome.com/682a778684.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="head">
+        <nav>
+            <div class="menu">
+              <span
+                ><a href="/html/index.html"><img src="/images/logo.png" height="150" style="margin-left: 20px; margin-top:70px"
+              /></a></span>
+            </div>
+          </nav>
+    </div>
+    <div class="feedback">
+        <form action="https://api.web3forms.com/submit" method="POST" class="left">
+            <div class="left-title">
+                <h2>Get it Done!</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="424f97b6-c32d-4a6e-95d5-f451e5bdad26">
+            <input type="text" name="name" placeholder="Your Name" class="inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="inputs" required>
+            <textarea name="message" placeholder="Give us your feedback" class="inputs" required></textarea>
+            <button type="submit"><h4>Submit</h4> <img src="arrow_icon.png" alt=""></button>
+        </form>
+        <div class="container1">
+        <div class="feedbackbox">
+            <div class="emoji">
+                <div id="emoji">
+                <img src="/images/poor.png">
+                <img src="/images/bad.png">
+                <img src="/images/okay.png">
+                <img src="/images/good.png">
+                <img src="/images/excellent.png">
+                
+
+            </div>
+
+        </div>
+        <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        
+    </div>
+</div> 
+    <script>
+
+        var stars= document.getElementsByClassName("fas");
+        var emoji= document.getElementById("emoji");
+
+        stars[0].onclick=function(){
+            stars[0].style.color="#ffd93b";
+            stars[1].style.color="#000";
+            stars[2].style.color="#000";
+            stars[3].style.color="#000";
+            stars[4].style.color="#000";
+            emoji.style.transform = "translateX(0)";
+
+        }
+        stars[1].onclick=function(){
+            stars[0].style.color="#ffd93b";
+            stars[1].style.color="#ffd93b";
+            stars[2].style.color="#000";
+            stars[3].style.color="#000";
+            stars[4].style.color="#000";
+            emoji.style.transform = "translateX(-100px)";
+            
+        }
+        stars[2].onclick=function(){
+            stars[0].style.color="#ffd93b";
+            stars[1].style.color="#ffd93b";
+            stars[2].style.color="#ffd93b";
+            stars[3].style.color="#000";
+            stars[4].style.color="#000";
+            emoji.style.transform = "translateX(-200px)";
+            
+        }
+        stars[3].onclick=function(){
+            stars[0].style.color="#ffd93b";
+            stars[1].style.color="#ffd93b";
+            stars[2].style.color="#ffd93b";
+            stars[3].style.color="#ffd93b";
+            stars[4].style.color="#000";
+            emoji.style.transform = "translateX(-300px)";
+            
+        }
+        stars[4].onclick=function(){
+            stars[0].style.color="#ffd93b";
+            stars[1].style.color="#ffd93b";
+            stars[2].style.color="#ffd93b";
+            stars[3].style.color="#ffd93b";
+            stars[4].style.color="#ffd93b";
+            emoji.style.transform = "translateX(-400px)";
+            
+        }
+
+    </script>
+   
+    
+</body>
+</html>
